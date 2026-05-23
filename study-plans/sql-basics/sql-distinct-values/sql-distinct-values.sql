@@ -1,0 +1,7 @@
+-- Write your SQL query here
+select
+    distinct customer_name as customer_name,
+    count(distinct product) as unique_products
+from orders
+group by customer_name
+order by unique_products desc, customer_name asc;
