@@ -9,5 +9,5 @@ def set_index_column(data, index_col):
     return {
         'index_values': df.index.to_list(),
         'columns': df.columns.to_list(),
-        'data': df[df.columns].to_dict('list')
+        'data': df.to_dict('list')
     }
