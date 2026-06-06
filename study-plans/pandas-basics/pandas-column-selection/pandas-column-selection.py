@@ -5,7 +5,8 @@ def select_column(data, column):
     Returns: dict with 'values' (list) and 'length' (int)
     """
     df = pd.DataFrame(data)
+
     return {
-        "values": df[column].tolist(),
-        "length": df.shape[0]
+        'values': df[column].to_list(),
+        'length': df[column].size
     }
