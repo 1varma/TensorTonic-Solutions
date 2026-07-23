@@ -10,9 +10,3 @@ def create_tensor(method, shape, value=0.0):
         return torch.ones(shape)
     if method == 'full':
         return torch.full(shape, value)
-    if method == 'eye':
-        return torch.eye(value)
-    if method == 'arange':
-        return torch.arange(shape)
-    if method == 'linspace':
-        return torch.linspace(shape)
