@@ -6,6 +6,4 @@ def dot_product(x, y):
     Must return a float.
     """
     # Write code here
-    x = np.array(x)
-    y = np.array(y)
-    return x@y
+    return np.array(x) @ np.array(y)
