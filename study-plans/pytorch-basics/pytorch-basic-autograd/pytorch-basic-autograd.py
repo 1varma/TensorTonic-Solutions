@@ -4,8 +4,12 @@ def compute_gradient(values):
     """
     Returns: list of float gradient values dy/dx
     """
-    values = torch.tensor(values)
+    x = torch.tensor(values,
+                    dtype = torch.float32,
+                    requires_grad = True)
 
-    result = values.pow(2) *3 + 2
+    y = (x**3 + 2 * x).sum()
 
-    return result.tolist()
+    y.backward()
+
+    return x.grad.tolist()
